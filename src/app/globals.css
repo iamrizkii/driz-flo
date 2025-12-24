@@ -49,6 +49,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -56,18 +57,24 @@ body {
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-20px);
   }
 }
 
 @keyframes pulse-soft {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.8;
   }
@@ -77,6 +84,7 @@ body {
   0% {
     background-position: -200% 0;
   }
+
   100% {
     background-position: 200% 0;
   }
@@ -95,17 +103,31 @@ body {
 }
 
 .animate-shimmer {
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
 }
 
 /* Delay utilities for staggered animations */
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
-.delay-500 { animation-delay: 0.5s; }
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
 
 /* Gradient backgrounds */
 .bg-gradient-pink {
@@ -182,4 +204,195 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Butterfly Animation */
+@keyframes butterfly {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(100px, -50px) rotate(15deg);
+  }
+
+  50% {
+    transform: translate(200px, 0) rotate(0deg);
+  }
+
+  75% {
+    transform: translate(100px, 50px) rotate(-15deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes flutter {
+
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+
+  50% {
+    transform: scaleX(0.7);
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg) translateX(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.6;
+  }
+
+  90% {
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translateY(110vh) rotate(720deg) translateX(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce-gentle {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Music Equalizer Animation */
+@keyframes equalizer-1 {
+
+  0%,
+  100% {
+    height: 4px;
+  }
+
+  50% {
+    height: 12px;
+  }
+}
+
+@keyframes equalizer-2 {
+
+  0%,
+  100% {
+    height: 8px;
+  }
+
+  50% {
+    height: 4px;
+  }
+}
+
+@keyframes equalizer-3 {
+
+  0%,
+  100% {
+    height: 6px;
+  }
+
+  50% {
+    height: 14px;
+  }
+}
+
+@keyframes equalizer-4 {
+
+  0%,
+  100% {
+    height: 10px;
+  }
+
+  50% {
+    height: 6px;
+  }
+}
+
+.animate-butterfly {
+  animation: butterfly linear infinite;
+}
+
+.animate-flutter {
+  animation: flutter ease-in-out infinite;
+}
+
+.animate-fall {
+  animation: fall linear infinite;
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 1s ease-in-out infinite;
+}
+
+.animate-equalizer-1 {
+  animation: equalizer-1 0.4s ease-in-out infinite;
+}
+
+.animate-equalizer-2 {
+  animation: equalizer-2 0.5s ease-in-out infinite;
+}
+
+.animate-equalizer-3 {
+  animation: equalizer-3 0.3s ease-in-out infinite;
+}
+
+.animate-equalizer-4 {
+  animation: equalizer-4 0.45s ease-in-out infinite;
+}
+
+/* Float Up Animation for Hearts */
+@keyframes float-up {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.5);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateY(-50vh) translateX(30px) scale(1);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translateY(-110vh) translateX(-20px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+.animate-float-up {
+  animation: float-up linear infinite;
+}
+
+/* Sparkle Animation */
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-sparkle {
+  animation: sparkle ease-in-out infinite;
 }
