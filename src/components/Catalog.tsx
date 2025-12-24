@@ -97,19 +97,19 @@ export default function Catalog() {
                                         {formatPrice(product.price)}
                                     </span>
 
-                                    <button
-                                        onClick={() => handleWhatsAppOrder(product.name)}
-                                        className="flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white text-sm font-medium rounded-full transition-colors"
-                                    >
-                                        <svg
-                                            className="w-4 h-4"
-                                            fill="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487z" />
-                                        </svg>
-                                        Order
-                                    </button>
+                             <button
+                                onClick={() => handleWhatsAppOrder(product.name)}
+                                className="flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white text-sm font-medium rounded-full transition-colors"
+                                >
+                                <Image
+                                    src="/images/wa.png"
+                                    alt="WhatsApp"
+                                    width={16}
+                                    height={16}
+                                    className="shrink-0"
+                                />
+                                Order
+                                </button>
                                 </div>
                             </div>
                         </div>
