@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
+
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -34,9 +36,16 @@ export default function Header() {
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center">
-                            <span className="text-white font-bold text-lg">D</span>
-                        </div>
+                       <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center overflow-hidden">
+    <Image
+        src="/images/logo.png"
+        alt="DRIZ.FLO Logo"
+        width={32}
+        height={32}
+        className="object-contain"
+    />
+</div>
+
                         <span className="text-2xl font-bold text-gradient">DRIZ.FLO</span>
                     </Link>
 

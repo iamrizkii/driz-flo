@@ -61,7 +61,7 @@ export const products: Product[] = [
         name: "Dekorasi Meja Bunga",
         price: 120000,
         image: "/images/products/dekorasi-meja.jpg",
-        category: "Dekorasi",
+        category: "Pot Mini",
         description: "Dekorasi meja cantik untuk ruangan Anda"
     },
     {
@@ -69,7 +69,7 @@ export const products: Product[] = [
         name: "Rangkaian Dinding",
         price: 150000,
         image: "/images/products/dekorasi-dinding.jpg",
-        category: "Dekorasi",
+        category: "Pot Mini",
         description: "Hiasan dinding estetik dari kawat bulu"
     }
 ];
