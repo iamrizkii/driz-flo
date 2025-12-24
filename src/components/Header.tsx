@@ -26,8 +26,8 @@ export default function Header() {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                    ? "glass shadow-lg py-3"
-                    : "bg-transparent py-5"
+                ? "glass shadow-lg py-3"
+                : "bg-transparent py-5"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,7 +57,7 @@ export default function Header() {
                     {/* CTA Button - Desktop */}
                     <div className="hidden md:block">
                         <a
-                            href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20produk%20DRIZ.FLO"
+                            href="https://wa.me/6289637180491?text=Halo,%20saya%20tertarik%20dengan%20produk%20DRIZ.FLO"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-primary inline-flex items-center gap-2"
@@ -116,7 +116,7 @@ export default function Header() {
                             </a>
                         ))}
                         <a
-                            href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20produk%20DRIZ.FLO"
+                            href="https://wa.me/6289637180491?text=Halo,%20saya%20tertarik%20dengan%20produk%20DRIZ.FLO"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-primary text-center"

@@ -78,7 +78,7 @@ export const categories = [
     "Semua",
     "Buket Bunga",
     "Gantungan Kunci",
-    "Dekorasi"
+    "Pot Mini"
 ];
 
 export const formatPrice = (price: number): string => {

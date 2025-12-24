@@ -9,21 +9,24 @@ import MusicPlayer from "@/components/MusicPlayer";
 
 export default function Home() {
   return (
-    <>
-      {/* Floating butterflies and petals */}
+    <div className="relative isolation-isolate">
+      {/* Background effects (HARUS di belakang) */}
       <FloatingElements />
 
-      {/* Background music player */}
+      {/* Music Player (overlay kecil, aman) */}
       <MusicPlayer />
 
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Catalog />
-        <Gallery />
-      </main>
-      <Footer />
-    </>
+      {/* Main Content */}
+      <div className="relative z-10">
+        <Header />
+        <main>
+          <Hero />
+          <About />
+          <Catalog />
+          <Gallery />
+        </main>
+        <Footer />
+      </div>
+    </div>
   );
 }

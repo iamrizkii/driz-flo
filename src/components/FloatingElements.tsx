@@ -69,7 +69,7 @@ export default function FloatingElements() {
     }, []);
 
     return (
-        <div className="fixed inset-0 pointer-events-none z-10 overflow-hidden">
+        <div className="fixed inset-0 pointer-events-none z-[999] overflow-hidden">
             {/* Falling Petals */}
             {petals.map((petal) => (
                 <div
@@ -95,21 +95,36 @@ export default function FloatingElements() {
                 </div>
             ))}
 
-            {/* Floating Hearts */}
-            {[...Array(8)].map((_, i) => (
+            {/* Floating Sakura Flowers */}
+            {[...Array(10)].map((_, i) => (
                 <div
-                    key={`heart-${i}`}
-                    className="absolute text-pink-300 opacity-30 animate-float-up"
+                    key={`sakura-${i}`}
+                    className="absolute opacity-30 animate-float-up"
                     style={{
-                        left: `${10 + i * 12}%`,
+                        left: `${Math.random() * 100}%`,
                         bottom: `-10%`,
-                        fontSize: `${14 + Math.random() * 10}px`,
-                        animationDuration: `${15 + Math.random() * 10}s`,
-                        animationDelay: `${Math.random() * 10}s`,
+                        width: `${32 + Math.random() * 24}px`,
+                        height: `${32 + Math.random() * 24}px`,
+                        animationDuration: `${14 + Math.random() * 10}s`,
+                        animationDelay: `${Math.random() * 8}s`,
+                        transform: `rotate(${Math.random() * 360}deg)`,
                     }}
                 >
-                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        className="w-full h-full text-pink-300"
+                    >
+                        <path d="
+        M12 2
+        C13.5 5 16 6 19 6
+        C17 8 16.5 10.5 18 13
+        C15 12.5 13.5 14 12 16
+        C10.5 14 9 12.5 6 13
+        C7.5 10.5 7 8 5 6
+        C8 6 10.5 5 12 2
+        Z
+      " />
                     </svg>
                 </div>
             ))}
