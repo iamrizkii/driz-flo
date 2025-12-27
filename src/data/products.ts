@@ -8,69 +8,98 @@ export interface Product {
 }
 
 export const products: Product[] = [
+    // ===== BUKET =====
     {
         id: 1,
-        name: "Buket Mawar Pink",
-        price: 85000,
-        image: "/images/products/buket-mawar.jpg",
+        name: "Buket Daisy",
+        price: 15000,
+        image: "/images/products/buket-daisy.jpeg",
         category: "Buket Bunga",
-        description: "Buket mawar cantik dari kawat bulu dengan sentuhan romantis"
+        description: "Buket bunga daisy handmade dari kawat bulu"
     },
+
+    // ===== KEYCHAIN =====
     {
         id: 2,
-        name: "Buket Tulip Pastel",
-        price: 95000,
-        image: "/images/products/buket-tulip.jpg",
-        category: "Buket Bunga",
-        description: "Rangkaian tulip pastel yang elegan dan timeless"
+        name: "Keychain Anggrek",
+        price: 15000,
+        image: "/images/products/keychain-anggrek2.jpeg",
+        category: "Gantungan Kunci",
+        description: "Gantungan kunci bunga anggrek mini"
     },
     {
         id: 3,
-        name: "Buket Sunflower",
-        price: 75000,
-        image: "/images/products/buket-sunflower.jpg",
-        category: "Buket Bunga",
-        description: "Buket bunga matahari cerah untuk momen spesial"
+        name: "Keychain Norigae Daisy",
+        price: 5000,
+        image: "/images/products/keychain-daisy.jpeg",
+        category: "Gantungan Kunci",
+        description: "Gantungan kunci bunga daisy lucu"
     },
     {
         id: 4,
-        name: "Gantungan Kunci Bunga",
-        price: 25000,
-        image: "/images/products/keychain-bunga.jpg",
+        name: "Keychain Daisy Mirror",
+        price: 10000,
+        image: "/images/products/keychain-daisymirror2.jpeg",
         category: "Gantungan Kunci",
-        description: "Gantungan kunci mini berbentuk bunga yang cute"
+        description: "Keychain daisy dengan aksen cermin"
     },
     {
         id: 5,
-        name: "Gantungan Kunci Hati",
-        price: 20000,
-        image: "/images/products/keychain-hati.jpg",
+        name: "Keychain Lily",
+        price: 5000,
+        image: "/images/products/keychain-lily.jpeg",
         category: "Gantungan Kunci",
-        description: "Gantungan kunci bentuk hati penuh cinta"
+        description: "Gantungan kunci bunga lily pastel"
     },
     {
         id: 6,
-        name: "Gantungan Kunci Karakter",
-        price: 35000,
-        image: "/images/products/keychain-karakter.jpg",
+        name: "Keychain Lollipop",
+        price: 3000,
+        image: "/images/products/keychain-lollipop.jpeg",
         category: "Gantungan Kunci",
-        description: "Gantungan kunci custom karakter favorit"
+        description: "Keychain lollipop warna-warni"
     },
     {
         id: 7,
-        name: "Dekorasi Meja Bunga",
-        price: 120000,
-        image: "/images/products/dekorasi-meja.jpg",
-        category: "Pot Mini",
-        description: "Dekorasi meja cantik untuk ruangan Anda"
+        name: "Keychain Mini Ribbon",
+        price: 3000,
+        image: "/images/products/keychain-miniribbon.jpeg",
+        category: "Gantungan Kunci",
+        description: "Keychain pita mini yang imut"
     },
     {
         id: 8,
-        name: "Rangkaian Dinding",
-        price: 150000,
-        image: "/images/products/dekorasi-dinding.jpg",
+        name: "Keychain Mini Ribbon Variasi",
+        price: 3000,
+        image: "/images/products/keychain-miniribbon2.jpeg",
+        category: "Gantungan Kunci",
+        description: "Keychain pita mini dengan warna berbeda"
+    },
+    {
+        id: 9,
+        name: "Keychain Mirror Cat",
+        price: 12000,
+        image: "/images/products/keychain-mirrorcat.jpeg",
+        category: "Gantungan Kunci",
+        description: "Keychain cermin karakter kucing"
+    },
+
+    // ===== POT MINI =====
+    {
+        id: 10,
+        name: "Pot Mini Lotus",
+        price: 20000,
+        image: "/images/products/potmini-lotus.jpeg",
         category: "Pot Mini",
-        description: "Hiasan dinding estetik dari kawat bulu"
+        description: "Tanaman lotus mini dari kawat bulu"
+    },
+    {
+        id: 11,
+        name: "Pot Mini Tulip",
+        price: 25000,
+        image: "/images/products/potmini-tulip.jpeg",
+        category: "Pot Mini",
+        description: "Pot mini bunga tulip handmade"
     }
 ];
 
@@ -85,7 +114,6 @@ export const formatPrice = (price: number): string => {
     return new Intl.NumberFormat('id-ID', {
         style: 'currency',
         currency: 'IDR',
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
+        minimumFractionDigits: 0
     }).format(price);
 };
